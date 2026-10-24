@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ro" data-theme="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studioul de sunete</title>
+<meta name="description" content="Aplicație de fizică pentru copii: sunetul ca vibrație, instrumente care sună de-adevăratelea (pahare cu apă, chitară din elastice, tobe), unde sonore, microfon și jocuri muzicale. Bilingv RO / EN.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+<link rel="stylesheet" href="assets/css/style.css?v=1">
+<link rel="stylesheet" href="assets/css/studio.css?v=1">
+</head>
+<body>
+
+<header class="top">
+  <div class="inner">
+    <h1 data-i18n="app.title">🎵 Studioul de sunete</h1>
+    <div class="badges">
+      <button class="pill" id="soundBtn" title="sunet / sound">🔊</button>
+      <button class="pill" id="langRo" aria-pressed="true">RO</button>
+      <button class="pill" id="langEn" aria-pressed="false">EN</button>
+      <button class="pill" id="themeBtn" title="light / dark">◐</button>
+    </div>
+    <p data-i18n="app.sub">Ce este sunetul, cum călătorește și cum îl faci mai înalt, mai jos, mai tare sau mai încet · cu instrumente care sună de-adevăratelea</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="say warn tip" id="tipVol" data-i18n="tip.vol">🎧 Dă volumul la jumătate. Aplicația cântă de-adevăratelea — dacă folosești căști, ține-l mai încet.</div>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" id="tab-what" aria-selected="true" data-i18n="tab.what">🔊 Ce este sunetul?</button>
+    <button role="tab" id="tab-shop" aria-selected="false" data-i18n="tab.shop">🎸 Atelierul de instrumente</button>
+    <button role="tab" id="tab-wave" aria-selected="false" data-i18n="tab.wave">〰️ Laboratorul undelor</button>
+    <button role="tab" id="tab-game" aria-selected="false" data-i18n="tab.game">⭐ Provocări</button>
+    <button role="tab" id="tab-quiz" aria-selected="false" data-i18n="tab.quiz">❓ Quiz</button>
+  </nav>
+
+  <!-- ================= 1. CE ESTE SUNETUL ================= -->
+  <section id="p-what" class="panel">
+    <h2 data-i18n="w1.h">1. Toba cu boabe de orez</h2>
+    <p class="muted" data-i18n="w1.p">Pe pielea tobei am pus câteva boabe de orez. Lovește toba (apasă pe ea sau pe butoane) și uită-te la boabe. De ce sar?</p>
+    <div class="stage"><canvas id="cvRice" width="960" height="330"></canvas></div>
+    <div class="controls">
+      <button class="btn ghost" id="riceSoft" data-i18n="w1.soft">🤏 Lovește încet</button>
+      <button class="btn warm" id="riceHard" data-i18n="w1.hard">💥 Lovește tare</button>
+    </div>
+    <div class="say" id="sayRice" data-i18n="w1.say0">Sunetul începe întotdeauna cu ceva care <b>vibrează</b> — se mișcă foarte repede înainte și înapoi.</div>
+
+    <h2 class="sec" data-i18n="w2.h">2. Cum ajunge sunetul la ureche?</h2>
+    <p class="muted" data-i18n="w2.p">Difuzorul împinge bucățelele mici din care e făcut aerul (particulele). Ele se împing una pe alta, ca într-un șir de domino, până la ureche. Alege prin ce trece sunetul, apoi trimite-l. Eva stă la 1 kilometru de difuzor, iar animația merge cu viteza adevărată.</p>
+    <div class="optrow">
+      <button class="opt" data-med="air" aria-pressed="true" data-i18n="w2.air">🌬️ Aer</button>
+      <button class="opt" data-med="water" aria-pressed="false" data-i18n="w2.water">💧 Apă</button>
+      <button class="opt" data-med="wood" aria-pressed="false" data-i18n="w2.wood">🪵 Lemn</button>
+      <button class="opt" data-med="space" aria-pressed="false" data-i18n="w2.space">🌌 Spațiu (nimic)</button>
+    </div>
+    <div class="stage"><canvas id="cvTravel" width="960" height="280"></canvas></div>
+    <div class="controls">
+      <button class="btn" id="travelGo" data-i18n="w2.go">📢 Trimite sunetul</button>
+      <div class="tile small"><div class="k" data-i18n="w2.speedK">Viteza sunetului</div><div class="v" id="travelSpeed">343 m/s</div></div>
+      <div class="tile small"><div class="k" data-i18n="w2.timeK">Ajunge la Eva după</div><div class="v" id="travelTime">—</div></div>
+    </div>
+    <div class="say" id="sayTravel" data-i18n="w2.say0">Apasă „Trimite sunetul” și urmărește valul care trece prin particule.</div>
+
+    <h2 class="sec" data-i18n="w3.h">3. Clopoțelul din borcan</h2>
+    <p class="muted" data-i18n="w3.p">Un clopoțel sună într-un borcan de sticlă. Cu o pompă scoatem aerul din borcan. Ce se întâmplă cu sunetul?</p>
+    <div class="stage"><canvas id="cvJar" width="960" height="320"></canvas></div>
+    <div class="controls">
+      <button class="btn" id="jarRing" data-i18n="w3.ring">🔔 Pornește clopoțelul</button>
+      <button class="btn warm" id="jarPump" data-i18n="w3.pump">⬇️ Pompează aerul afară</button>
+      <button class="btn ghost" id="jarAir" data-i18n="w3.air">⬆️ Lasă aerul înapoi</button>
+      <div class="tile small"><div class="k" data-i18n="w3.airK">Aer în borcan</div><div class="v" id="jarAirV">100 %</div>
+        <div class="meter"><span id="jarAirBar" style="width:100%"></span></div></div>
+    </div>
+    <div class="say" id="sayJar" data-i18n="w3.say0">Pornește clopoțelul, apoi ține apăsat pe pompă.</div>
+
+    <h2 class="sec" data-i18n="w4.h">4. Aproape, departe și ascuns după pernă</h2>
+    <p class="muted" data-i18n="w4.p">Pornește radioul. Mută-o pe Eva mai aproape sau mai departe, apoi pune ceva între ea și radio. Ce oprește cel mai bine sunetul?</p>
+    <div class="stage"><canvas id="cvDist" width="960" height="250"></canvas></div>
+    <div class="controls">
+      <button class="btn" id="radioBtn" data-i18n="w4.on">📻 Pornește radioul</button>
+      <label class="field"><span data-i18n="w4.dist">Distanța:</span>
+        <input type="range" id="distR" min="1" max="10" step="0.5" value="2"> <b id="distV">2 m</b></label>
+    </div>
+    <div class="optrow">
+      <span class="ol" data-i18n="w4.between">Între ele:</span>
+      <button class="opt" data-mat="none" aria-pressed="true" data-i18n="w4.none">nimic</button>
+      <button class="opt" data-mat="foil" aria-pressed="false" data-i18n="w4.foil">✨ folie de aluminiu</button>
+      <button class="opt" data-mat="card" aria-pressed="false" data-i18n="w4.card">📦 carton</button>
+      <button class="opt" data-mat="egg" aria-pressed="false" data-i18n="w4.egg">🥚 cofraj de ouă</button>
+      <button class="opt" data-mat="pillow" aria-pressed="false" data-i18n="w4.pillow">🛏️ pernă groasă</button>
+    </div>
+    <div class="readout">
+      <div class="tile"><div class="k" data-i18n="w4.loudK">Cât de tare aude Eva</div>
+        <div class="loudbar" id="loudBar"></div></div>
+    </div>
+    <div class="say" id="sayDist" data-i18n="w4.say0">Sunetul se împrăștie în toate părțile. Cu cât ești mai departe, cu atât îți ajunge mai puțin din el.</div>
+  </section>
+
+  <!-- ================= 2. ATELIERUL ================= -->
+  <section id="p-shop" class="panel hidden">
+    <div class="optrow big">
+      <button class="opt" data-ins="glass" aria-pressed="true" data-i18n="s.glass">🥛 Paharele cu apă</button>
+      <button class="opt" data-ins="band" aria-pressed="false" data-i18n="s.band">🎸 Chitara din elastice</button>
+      <button class="opt" data-ins="drum" aria-pressed="false" data-i18n="s.drum">🥁 Constructorul de tobe</button>
+    </div>
+
+    <div id="ins-glass">
+      <h2 data-i18n="g.h">Orchestra de pahare</h2>
+      <p class="muted" data-i18n="g.p">Atinge un pahar ca să-l faci să sune. <b>Trage în sus sau în jos</b> pe pahar ca să pui sau să scoți apă. Merg și tastele 1–8.</p>
+      <div class="optrow">
+        <span class="ol" data-i18n="g.how">Cum îl faci să sune?</span>
+        <button class="opt" data-gmode="tap" aria-pressed="true" data-i18n="g.tap">🥄 Lovesc cu lingurița</button>
+        <button class="opt" data-gmode="blow" aria-pressed="false" data-i18n="g.blow">💨 Suflu peste gura sticlei</button>
+      </div>
+      <div class="stage"><canvas id="cvGlass" width="960" height="380"></canvas></div>
+      <div class="controls">
+        <button class="btn" id="gTune" data-i18n="g.tune">🎼 Acordează gama Do–Re–Mi</button>
+        <button class="btn ghost" id="gEmpty" data-i18n="g.empty">🫗 Golește toate</button>
+        <button class="btn ghost" id="gFull" data-i18n="g.full">🚰 Umple toate</button>
+        <button class="btn ghost" id="gSweep" data-i18n="g.sweep">🎹 Cântă-le pe rând</button>
+      </div>
+      <div class="say" id="sayGlass" data-i18n="g.say0">Încearcă: golește toate paharele, apoi umple doar unul până sus. Care sună mai jos?</div>
+    </div>
+
+    <div id="ins-band" class="hidden">
+      <h2 data-i18n="b.h">Chitara din cutie și elastice</h2>
+      <p class="muted" data-i18n="b.p">O cutie de pantofi, un elastic și un creion pe post de „căluș”. <b>Ciupește elasticul</b> (apasă sau trage peste el) și schimbă cele trei lucruri de mai jos.</p>
+      <div class="stage"><canvas id="cvBand" width="960" height="320"></canvas></div>
+      <div class="optrow">
+        <span class="ol" data-i18n="b.thick">Elasticul:</span>
+        <button class="opt" data-thick="thin" aria-pressed="false" data-i18n="b.thin">subțire</button>
+        <button class="opt" data-thick="mid" aria-pressed="true" data-i18n="b.mid">mijlociu</button>
+        <button class="opt" data-thick="fat" aria-pressed="false" data-i18n="b.fat">gros</button>
+      </div>
+      <div class="controls">
+        <label class="field"><span data-i18n="b.tight">Cât de întins:</span>
+          <input type="range" id="bTight" min="1" max="5" step="1" value="3"> <b id="bTightV">3</b></label>
+        <label class="field"><span data-i18n="b.len">Partea care vibrează:</span>
+          <input type="range" id="bLen" min="10" max="30" step="1" value="24"> <b id="bLenV">24 cm</b></label>
+        <button class="btn" id="bPluck" data-i18n="b.pluck">👆 Ciupește</button>
+      </div>
+      <div class="readout">
+        <div class="tile"><div class="k" data-i18n="b.pitchK">Cât de înalt sună</div><div class="pitchbar"><span id="bPitchDot"></span></div>
+          <div class="pitchlbl"><span data-i18n="pl.low">🐻 jos (gros)</span><span data-i18n="pl.high">🐦 înalt (subțire)</span></div></div>
+        <div class="tile small"><div class="k" data-i18n="b.hzK">Vibrații pe secundă</div><div class="v" id="bHz">—</div></div>
+      </div>
+      <div class="say" id="sayBand" data-i18n="b.say0">Ciupește elasticul și uită-te cum vibrează. Apoi întinde-l mai tare și ciupește-l din nou.</div>
+    </div>
+
+    <div id="ins-drum" class="hidden">
+      <h2 data-i18n="d.h">Constructorul de tobe</h2>
+      <p class="muted" data-i18n="d.p">Construiește toba ta: alege cât de mare e și cât de întinsă e pielea. Apoi lovește-o (apasă pe ea).</p>
+      <div class="stage"><canvas id="cvDrum" width="960" height="320"></canvas></div>
+      <div class="optrow">
+        <span class="ol" data-i18n="d.size">Mărimea:</span>
+        <button class="opt" data-dsize="s" aria-pressed="false" data-i18n="d.s">mică (bongo)</button>
+        <button class="opt" data-dsize="m" aria-pressed="true" data-i18n="d.m">mijlocie</button>
+        <button class="opt" data-dsize="l" aria-pressed="false" data-i18n="d.l">mare (toba bas)</button>
+      </div>
+      <div class="controls">
+        <label class="field"><span data-i18n="d.tight">Pielea:</span>
+          <input type="range" id="dTight" min="1" max="5" step="1" value="3"> <b id="dTightV">—</b></label>
+        <button class="btn warm" id="dHit" data-i18n="d.hit">🥁 Lovește</button>
+      </div>
+      <div class="readout">
+        <div class="tile"><div class="k" data-i18n="b.pitchK">Cât de înalt sună</div><div class="pitchbar"><span id="dPitchDot"></span></div>
+          <div class="pitchlbl"><span data-i18n="pl.low">🐻 jos (gros)</span><span data-i18n="pl.high">🐦 înalt (subțire)</span></div></div>
+        <div class="tile small"><div class="k" data-i18n="b.hzK">Vibrații pe secundă</div><div class="v" id="dHz">—</div></div>
+      </div>
+      <div class="say" id="sayDrum" data-i18n="d.say0">Lovește toba mijlocie. Apoi fă-o mare și lovește-o din nou.</div>
+    </div>
+  </section>
+
+  <!-- ================= 3. LABORATORUL UNDELOR ================= -->
+  <section id="p-wave" class="panel hidden">
+    <h2 data-i18n="o.h">Desenul sunetului — unda</h2>
+    <p class="muted" data-i18n="o.p">Oamenii de știință „desenează” sunetul ca pe un val. Mută cele două glisoare și privește cum se schimbă valul. Unul îl face mai <b>înalt sau mai jos</b>, celălalt mai <b>tare sau mai încet</b>.</p>
+    <div class="stage scope"><canvas id="cvScope" width="960" height="300"></canvas></div>
+    <div class="controls">
+      <button class="btn" id="oPlay" data-i18n="o.play">▶ Pornește sunetul</button>
+      <label class="field"><span data-i18n="o.pitch">🐻 jos</span>
+        <input type="range" id="oPitch" min="0" max="100" value="35"><span data-i18n="o.pitch2">înalt 🐦</span></label>
+      <label class="field"><span data-i18n="o.loud">🤫 încet</span>
+        <input type="range" id="oLoud" min="5" max="100" value="55"><span data-i18n="o.loud2">tare 📢</span></label>
+      <label class="field"><input type="checkbox" id="oGhost"> <span data-i18n="o.ghost">păstrează valul vechi, ca să compar</span></label>
+    </div>
+    <div class="say" id="sayScope" data-i18n="o.say0">Valuri <b>dese</b> = sunet <b>înalt</b>. Valuri <b>înalte</b> (mari) = sunet <b>tare</b>. Nu le încurca!</div>
+
+    <h2 class="sec" data-i18n="m.h">🎤 Cântă tu!</h2>
+    <p class="muted" data-i18n="m.p">Pornește microfonul și cântă, fluieră sau bate din palme. Vei vedea valul vocii tale. Poți cânta mai jos ca un urs și apoi mai sus ca o păsărică?</p>
+    <div class="stage scope"><canvas id="cvMic" width="960" height="240"></canvas></div>
+    <div class="controls">
+      <button class="btn" id="micBtn" data-i18n="m.on">🎤 Pornește microfonul</button>
+      <div class="tile small"><div class="k" data-i18n="m.noteK">Nota ta</div><div class="v" id="micNote">—</div></div>
+      <div class="tile small"><div class="k" data-i18n="m.loudK">Cât de tare</div><div class="meter"><span id="micLoud"></span></div></div>
+      <div class="tile small"><div class="k" data-i18n="m.recK">Cea mai înaltă notă</div><div class="v" id="micHigh">—</div></div>
+      <div class="tile small"><div class="k" data-i18n="m.lowK">Cea mai joasă notă</div><div class="v" id="micLow">—</div></div>
+    </div>
+    <div class="say" id="sayMic" data-i18n="m.say0">Microfonul rămâne doar în calculatorul tău: nimic nu se înregistrează și nimic nu pleacă pe internet.</div>
+
+    <h2 class="sec" data-i18n="h.h">Cine aude ce? Urechile animalelor</h2>
+    <p class="muted" data-i18n="h.p">Fiecare animal aude doar sunetele dintre o notă cea mai joasă și una cea mai înaltă. Bara arată de unde până unde aude fiecare.</p>
+    <div class="hear" id="hearBox"></div>
+
+    <h2 class="sec" data-i18n="v.h">Cuvinte de la școală · School words</h2>
+    <div class="vocab" id="vocabBox"></div>
+  </section>
+
+  <!-- ================= 4. PROVOCĂRI ================= -->
+  <section id="p-game" class="panel hidden">
+    <div class="missions" id="missions"></div>
+    <div class="total" id="totalStars"></div>
+    <div class="gamebox" id="gameBox"></div>
+    <div class="overlay hidden" id="overlay">
+      <div class="card">
+        <div class="big" id="ovTitle"></div>
+        <div class="stars" id="ovStars"></div>
+        <p id="ovText"></p>
+        <div class="learn" id="ovLearn">
+          <h3 data-i18n="ov.learn">Ai descoperit</h3><p id="ovLearnP"></p>
+          <h3 data-i18n="ov.real">În viața reală</h3><p id="ovReal"></p>
+        </div>
+        <div class="ovbtns">
+          <button class="btn ghost" id="ovRetry" data-i18n="ov.retry">Încearcă din nou</button>
+          <button class="btn" id="ovNext" data-i18n="ov.next">Provocarea următoare →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 5. QUIZ ================= -->
+  <section id="p-quiz" class="panel hidden">
+    <h2 data-i18n="quiz.h">Quizul inginerului de sunet — 8 întrebări</h2>
+    <div id="quizBox"></div>
+    <div class="controls">
+      <button class="btn ghost" id="btnQuizReset" data-i18n="quiz.again">Încă o dată</button>
+      <span class="score" id="vScore"></span>
+    </div>
+  </section>
+
+</div>
+
+<footer class="bot">
+  <p data-i18n="foot.1">Experimente de făcut și acasă: toba cu orez, paharele cu apă, chitara din cutie de pantofi, telefonul din pahare și sfoară.</p>
+  <p data-i18n="foot.2">Aplicație didactică pentru Eva · funcționează offline, fără internet · sunetele sunt create direct de browser.</p>
+</footer>
+
+<script src="assets/js/i18n.js?v=1"></script>
+<script src="assets/js/audio.js?v=1"></script>
+<script src="assets/js/art.js?v=1"></script>
+<script src="assets/js/app.js?v=1"></script>
+</body>
+</html>
