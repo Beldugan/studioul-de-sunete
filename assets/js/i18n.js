@@ -495,3 +495,172 @@ const QUIZ = {
       f: "Soft materials full of air, like a pillow, soak up vibrations. They are good sound insulators." }
   ]
 };
+
+/* ---------- Sunetul la lucru: medicină, arme și apărare ---------- */
+Object.assign(I18N.ro, {
+  "tab.work": "🩺 Sunetul la lucru",
+  "quiz.h": "Quizul inginerului de sunet — 10 întrebări",
+  "k.med": "🏥 Sunetul care vindecă — medicina",
+  "k.war": "🛡️ Sunetul ca armă și ca scut",
+
+  "e.h": "1. Ecograful: să vezi înăuntru cu ajutorul sunetului",
+  "e.p": "Medicul pune pe piele puțin gel și o sondă. Sonda trimite sunete atât de înalte încât nu le auzim (<b>ultrasunete</b>) și ascultă ecoul care se întoarce. Calculatorul face din ecouri o imagine. <b>Trage sonda pe piele</b> și descoperă ce e înăuntru!",
+  "e.who": "Pacientul:", "e.baby": "🤰 o mămică", "e.kidney": "🧑 un om cu dureri de spate",
+  "e.auto": "▶ Scanează singur", "e.reset": "↺ Șterge imaginea", "e.doneK": "Imagine descoperită",
+  "e.say0": "Ține apăsat pe sondă (sau pe burtă) și mișc-o încet de la stânga la dreapta.",
+  "e.scan": "Sonda trimite ultrasunete de <b>5 milioane de vibrații pe secundă</b>. Unde sunetul întâlnește ceva tare (oase, pereți), ecoul e puternic și pe ecran apare <b>alb</b>. Lichidul nu face ecou, așa că rămâne <b>negru</b>.",
+  "e.doneBaby": "Este un <b>bebeluș</b>! Se văd capul, coloana ca un șirag de mărgele, mânuța și piciorușul. Ecografia nu doare și e sigură, de aceea o folosesc medicii ca să vadă cum crește bebelușul în burtica mamei.",
+  "e.doneKidney": "Este un <b>rinichi</b>. Vezi punctul foarte alb din mijloc? E o <b>piatră</b>. Sub ea e o dungă neagră: piatra oprește tot sunetul și lasă în spate o „umbră”. Așa știe medicul că e piatră. Mai jos poți vedea cum se sparge!",
+  "e.screen": "ECOGRAF · 5 MHz", "e.inside": "Ce e înăuntru?",
+
+  "st.h": "2. Stetoscopul: ascultă inima",
+  "st.p": "Stetoscopul strânge sunetele slabe din corp și le duce prin tuburi direct în urechile medicului. Inima face două sunete la fiecare bătaie: „bum-tac”. Sunt ușile (valvele) inimii care se închid.",
+  "st.on": "🩺 Ascultă inima", "st.off": "⏹ Oprește", "st.rest": "🧘 în repaus", "st.run": "🏃 după alergat", "st.bpmK": "Bătăi pe minut",
+  "st.say0": "Pune mâna pe pieptul tău și numără bătăile într-un minut. Seamănă cu ce aude stetoscopul?",
+  "st.sayRest": "În repaus, inima unui copil bate cam <b>80 de ori pe minut</b>. Primul sunet („bum”) e mai gros, al doilea („tac”) e mai scurt și mai sus.",
+  "st.sayRun": "După alergat, mușchii au nevoie de mai mult sânge, așa că inima bate mult mai repede: cam <b>130 de ori pe minut</b>. Primul stetoscop a fost făcut în 1816 de un medic francez, René Laennec, dintr-o foaie de hârtie răsucită ca un tub!",
+
+  "l.h": "3. Spargerea pietrelor de la rinichi, fără nicio tăietură",
+  "l.p": "Uneori în rinichi se formează pietricele care dor. Aparatul de mai jos trimite <b>unde de șoc</b> (sunete foarte scurte și puternice) printr-o pernă cu apă. O oglindă metalică le adună pe toate exact în piatră. Pielea nu simte aproape nimic, dar piatra crapă puțin câte puțin.",
+  "l.shot": "💥 Trimite o undă de șoc", "l.reset": "↺ Pacient nou", "l.shotsK": "Unde trimise",
+  "l.say0": "Apasă butonul și urmărește cum se strâng undele în piatră.",
+  "l.say1": "Undele trec prin apă și prin corp fără să strice nimic, pentru că sunt împrăștiate. Doar în piatră se adună toate deodată. Piatra a început să crape!",
+  "l.say2": "Piatra s-a rupt în bucăți. Mai trimite câteva unde!",
+  "l.say3": "Gata! Piatra s-a făcut nisip fin, care iese singur din corp. Fără bisturiu și fără cusături. În realitate, aparatul trimite câteva mii de unde, una pe secundă.",
+  "l.kidney": "rinichi", "l.stone": "piatra", "l.water": "pernă cu apă", "l.mirror": "oglinda care adună undele", "l.skin": "pielea",
+
+  "mx.h": "Alte ajutoare cu sunet",
+  "mx.1t": "La dentist", "mx.1": "Un vârf mic care vibrează de zeci de mii de ori pe secundă desprinde tartrul de pe dinți.",
+  "mx.2t": "Aparatul auditiv", "mx.2": "Un microfon mititel prinde sunetele, le face mai tari și le trimite în ureche, pentru oamenii care aud mai greu.",
+  "mx.3t": "Testul de auz", "mx.3": "Cu căștile pe urechi, auzi sunete înalte și joase, tot mai încete. Ridici mâna când auzi ceva.",
+  "mx.4t": "Curățarea instrumentelor", "mx.4": "Într-o cuvă cu apă, ultrasunetele fac bule mici care curăță instrumentele medicilor până în cele mai mici colțuri.",
+
+  "so.h": "4. Sonarul: submarinul care „vede” cu urechile",
+  "so.p": "În adâncul mării e întuneric, iar submarinele nu au ferestre. Ele trimit un „ping” și ascultă ecoul. Cu cât ecoul se întoarce mai târziu, cu atât obiectul e mai departe. În marea asta sunt <b>trei lucruri ascunse</b>. Mută submarinul în sus și în jos și găsește-le pe toate!",
+  "so.up": "⬆ Urcă", "so.down": "⬇ Coboară", "so.ping": "📡 Ping!",
+  "so.echoK": "Ecoul s-a întors după", "so.distK": "Deci obiectul e la", "so.foundK": "Găsite",
+  "so.say0": "Sunetul merge prin apă cu 1.480 de metri pe secundă. Ecoul face drumul de două ori: dus și întors.",
+  "so.none": "Niciun ecou. În fața submarinului, la adâncimea asta, nu e nimic. Încearcă mai sus sau mai jos.",
+  "so.calc": "Ecoul a venit după <b>{t} s</b>. Sunetul a mers dus-întors, deci obiectul e la jumătate: 1.480 × {t} ÷ 2 = <b>{d} m</b>. ",
+  "so.whale": "E o <b>balenă</b>! Și balenele folosesc sunete ca să vorbească între ele.",
+  "so.sub": "Ai găsit <b>submarinul ascuns</b>! Așa se caută submarinele: prin ecou.",
+  "so.rock": "E o <b>stâncă</b> pe fundul mării. Sonarul îi ajută pe marinari să nu se lovească de ea.",
+  "so.all": " 🎉 Ai găsit toate cele trei lucruri ascunse!",
+  "so.lw": "balenă", "so.ls": "submarin", "so.lr": "stâncă", "so.you": "tu",
+
+  "lr.h": "5. Tunul de sunet: cum alungă navele pirații",
+  "lr.p": "Unele nave mari au un aparat numit <b>LRAD</b>. Seamănă cu o farfurie mare și trimite sunetul ca pe un fascicul de lanternă: strâns, într-o singură direcție, foarte departe. Întâi transmite avertismente cu vocea. Dacă pirații nu pleacă, trimite un sunet atât de puternic încât îi doare urechile, așa că se întorc. Nu folosește gloanțe: e o armă care <b>alungă</b>, nu una care distruge.",
+  "lr.mega": "📢 Megafon obișnuit", "lr.lrad": "🎯 Tunul de sunet (LRAD)",
+  "lr.go": "🔊 Trimite avertismentul", "lr.reset": "↺ De la capăt", "lr.dbK": "Cât de tare ajunge la bărcuță",
+  "lr.say0": "Alege megafonul, apoi tunul de sunet. Ce diferență vezi?",
+  "lr.sayMega": "Megafonul împrăștie sunetul în toate părțile. Până la bărcuță ajunge doar o mică parte, cam cât o conversație. Pirații abia îl aud și vin mai departe.",
+  "lr.sayLrad": "Tunul de sunet ține tot sunetul într-un fascicul îngust, așa că ajunge foarte tare și departe. Pirații își acoperă urechile și se întorc! (Aici auzi doar un bip încet: în realitate, de aproape, ar fi mai tare decât un motor de avion.)",
+
+  "sh.h": "6. Creveta-pistol: arma de sunet din natură",
+  "sh.p": "Creveta-pistol e mică, cât un deget, dar are un clește uriaș. Îl închide atât de repede încât apa țâșnește și face o bulă. Când bula se sparge, se aude un „PAC!”, unul dintre cele mai puternice sunete din mare. Peștișorii din apropiere rămân amețiți, iar creveta îi prinde.",
+  "sh.snap": "🦐 Pocnește din clește!",
+  "sh.say0": "Apasă butonul și uită-te atent la bulă: când se sparge, apare și o mică sclipire de lumină!",
+  "sh.say1": "PAC! Bula s-a spart așa de repede încât, pentru o clipă, înăuntru a fost aproape la fel de cald ca pe suprafața Soarelui, de aceea a sclipit. Peștișorul e amețit. Peste câteva clipe își revine și fuge.",
+
+  "db.h": "7. Cât de tare e prea tare? Rigla decibelilor",
+  "db.p": "Tăria sunetului se măsoară în <b>decibeli (dB)</b>. La fiecare 10 dB în plus, sunetul e de 10 ori mai puternic. Peste 85 dB, ascultat mult timp, sunetul strică încet urechile. De aceea muncitorii de pe șantier și de pe aeroport poartă căști de protecție.",
+  "db.0": "abia se aude (pragul auzului)", "db.30": "șoaptă, frunze foșnind", "db.60": "o conversație obișnuită", "db.85": "trafic intens: de aici în sus, după multe ore, urechile obosesc",
+  "db.100": "motocicletă, suflantă de frunze", "db.110": "concert rock, lângă boxe", "db.120": "pragul durerii: tunet foarte aproape", "db.140": "motor de avion la decolare, de aproape", "db.150": "tunul de sunet LRAD, la 1 metru",
+
+  "wx.h": "Încă ceva despre sunete puternice",
+  "wx.1t": "Bubuitul avionului", "wx.1": "Când un avion zboară mai repede decât sunetul (peste 1.235 km/h), sunetele lui se adună într-un singur „BUM” uriaș, care se aude pe pământ ca un tunet.",
+  "wx.2t": "Sirena de alarmă", "wx.2": "Sirenele urcă și coboară mereu, ca să fie auzite peste tot în oraș și să nu le confunzi cu nimic altceva.",
+  "wx.3t": "Sperietoarea de păsări", "wx.3": "Pe aeroporturi, difuzoare speciale imită strigătele de pericol ale păsărilor, ca să le țină departe de motoarele avioanelor.",
+  "wx.4t": "Delfinii și liliecii", "wx.4": "Ei au avut sonar cu milioane de ani înaintea submarinelor: strigă și ascultă ecoul ca să-și găsească hrana."
+});
+
+Object.assign(I18N.en, {
+  "tab.work": "🩺 Sound at work",
+  "quiz.h": "The sound engineer's quiz — 10 questions",
+  "k.med": "🏥 Sound that heals — medicine",
+  "k.war": "🛡️ Sound as a weapon and a shield",
+
+  "e.h": "1. The ultrasound scanner: seeing inside with sound",
+  "e.p": "The doctor puts a little gel on the skin and a probe. The probe sends sounds so high we can't hear them (<b>ultrasound</b>) and listens for the echo. A computer turns the echoes into a picture. <b>Drag the probe across the skin</b> and find out what's inside!",
+  "e.who": "Patient:", "e.baby": "🤰 a mum-to-be", "e.kidney": "🧑 someone with back pain",
+  "e.auto": "▶ Scan by itself", "e.reset": "↺ Clear the picture", "e.doneK": "Picture uncovered",
+  "e.say0": "Press and hold on the probe (or the tummy) and move it slowly from left to right.",
+  "e.scan": "The probe sends ultrasound at <b>5 million vibrations per second</b>. Where the sound hits something hard (bones, walls), the echo is strong and the screen shows <b>white</b>. Liquid makes no echo, so it stays <b>black</b>.",
+  "e.doneBaby": "It's a <b>baby</b>! You can see the head, the spine like a string of beads, a little hand and a leg. Ultrasound doesn't hurt and is safe, which is why doctors use it to watch a baby growing inside its mum.",
+  "e.doneKidney": "It's a <b>kidney</b>. See the very white dot in the middle? That's a <b>stone</b>. Below it there's a dark stripe: the stone blocks all the sound and leaves a “shadow” behind it. That's how the doctor knows it's a stone. Further down you can watch it being broken up!",
+  "e.screen": "ULTRASOUND · 5 MHz", "e.inside": "What's inside?",
+
+  "st.h": "2. The stethoscope: listen to the heart",
+  "st.p": "A stethoscope collects quiet sounds from the body and carries them through tubes straight into the doctor's ears. The heart makes two sounds with every beat: “lub-dub”. They are the heart's doors (valves) closing.",
+  "st.on": "🩺 Listen to the heart", "st.off": "⏹ Stop", "st.rest": "🧘 resting", "st.run": "🏃 after running", "st.bpmK": "Beats per minute",
+  "st.say0": "Put your hand on your chest and count the beats in one minute. Does it sound like the stethoscope?",
+  "st.sayRest": "At rest, a child's heart beats about <b>80 times a minute</b>. The first sound (“lub”) is deeper, the second (“dub”) is shorter and higher.",
+  "st.sayRun": "After running, your muscles need more blood, so the heart beats much faster: about <b>130 times a minute</b>. The first stethoscope was made in 1816 by a French doctor, René Laennec, from a sheet of paper rolled into a tube!",
+
+  "l.h": "3. Breaking kidney stones without a single cut",
+  "l.p": "Sometimes little stones form in the kidneys and they hurt. The machine below sends <b>shock waves</b> (very short, powerful sounds) through a water cushion. A metal mirror gathers all of them exactly onto the stone. The skin hardly feels anything, but the stone cracks bit by bit.",
+  "l.shot": "💥 Send a shock wave", "l.reset": "↺ New patient", "l.shotsK": "Waves sent",
+  "l.say0": "Press the button and watch the waves gather on the stone.",
+  "l.say1": "The waves pass through water and the body without harm because they are spread out. Only at the stone do they all arrive together. The stone has started to crack!",
+  "l.say2": "The stone has broken into pieces. Send a few more waves!",
+  "l.say3": "Done! The stone has turned into fine sand that leaves the body on its own. No scalpel and no stitches. In real life the machine sends a few thousand waves, about one per second.",
+  "l.kidney": "kidney", "l.stone": "stone", "l.water": "water cushion", "l.mirror": "mirror that gathers the waves", "l.skin": "skin",
+
+  "mx.h": "More helpers that use sound",
+  "mx.1t": "At the dentist", "mx.1": "A tiny tip that vibrates tens of thousands of times a second knocks tartar off your teeth.",
+  "mx.2t": "Hearing aids", "mx.2": "A tiny microphone picks up sounds, makes them louder and sends them into the ear, for people who don't hear well.",
+  "mx.3t": "Hearing test", "mx.3": "With headphones on, you hear high and low sounds that get quieter and quieter. You raise your hand when you hear one.",
+  "mx.4t": "Cleaning instruments", "mx.4": "In a tank of water, ultrasound makes tiny bubbles that clean doctors' instruments right into the smallest corners.",
+
+  "so.h": "4. Sonar: the submarine that “sees” with its ears",
+  "so.p": "Deep in the sea it's dark, and submarines have no windows. They send a “ping” and listen for the echo. The later the echo comes back, the further away the object is. There are <b>three hidden things</b> in this sea. Move the submarine up and down and find them all!",
+  "so.up": "⬆ Up", "so.down": "⬇ Down", "so.ping": "📡 Ping!",
+  "so.echoK": "The echo came back after", "so.distK": "So the object is at", "so.foundK": "Found",
+  "so.say0": "Sound travels through water at 1,480 metres per second. The echo makes the trip twice: there and back.",
+  "so.none": "No echo. There's nothing in front of the submarine at this depth. Try higher or lower.",
+  "so.calc": "The echo came back after <b>{t} s</b>. The sound went there and back, so the object is half-way: 1,480 × {t} ÷ 2 = <b>{d} m</b>. ",
+  "so.whale": "It's a <b>whale</b>! Whales use sounds to talk to each other too.",
+  "so.sub": "You found the <b>hidden submarine</b>! That's how submarines are hunted: by echo.",
+  "so.rock": "It's a <b>rock</b> on the seabed. Sonar helps sailors avoid hitting it.",
+  "so.all": " 🎉 You found all three hidden things!",
+  "so.lw": "whale", "so.ls": "submarine", "so.lr": "rock", "so.you": "you",
+
+  "lr.h": "5. The sound cannon: how ships drive pirates away",
+  "lr.p": "Some big ships carry a device called an <b>LRAD</b>. It looks like a big dish and sends sound like a torch beam: narrow, in one direction, very far. First it broadcasts spoken warnings. If the pirates don't leave, it sends a sound so strong that it hurts their ears, so they turn back. It fires no bullets: it's a weapon that <b>drives people away</b>, not one that destroys.",
+  "lr.mega": "📢 Ordinary megaphone", "lr.lrad": "🎯 Sound cannon (LRAD)",
+  "lr.go": "🔊 Send the warning", "lr.reset": "↺ Start again", "lr.dbK": "How loud it is at the small boat",
+  "lr.say0": "Choose the megaphone, then the sound cannon. What difference do you see?",
+  "lr.sayMega": "The megaphone spreads the sound in every direction. Only a small part reaches the boat, about as loud as a conversation. The pirates barely hear it and keep coming.",
+  "lr.sayLrad": "The sound cannon keeps all the sound in a narrow beam, so it arrives very loud, far away. The pirates cover their ears and turn back! (Here you only hear a gentle beep: in real life, close up, it would be louder than a jet engine.)",
+
+  "sh.h": "6. The pistol shrimp: nature's sound weapon",
+  "sh.p": "The pistol shrimp is tiny, about the size of a finger, but it has one huge claw. It snaps it shut so fast that water shoots out and makes a bubble. When the bubble collapses there's a “SNAP!”, one of the loudest sounds in the sea. Small fish nearby are stunned, and the shrimp catches them.",
+  "sh.snap": "🦐 Snap the claw!",
+  "sh.say0": "Press the button and watch the bubble closely: when it collapses, there's a tiny flash of light too!",
+  "sh.say1": "SNAP! The bubble collapsed so fast that for an instant it was nearly as hot inside as the surface of the Sun, which is why it flashed. The little fish is stunned. In a moment it will recover and swim away.",
+
+  "db.h": "7. How loud is too loud? The decibel ruler",
+  "db.p": "Loudness is measured in <b>decibels (dB)</b>. Every extra 10 dB makes a sound 10 times more powerful. Above 85 dB, listened to for a long time, sound slowly damages your ears. That's why people working on building sites and at airports wear ear defenders.",
+  "db.0": "only just audible (threshold of hearing)", "db.30": "a whisper, rustling leaves", "db.60": "normal conversation", "db.85": "heavy traffic: from here up, after many hours, ears get tired",
+  "db.100": "motorbike, leaf blower", "db.110": "rock concert, next to the speakers", "db.120": "threshold of pain: thunder very close by", "db.140": "jet engine taking off, close up", "db.150": "LRAD sound cannon, at 1 metre",
+
+  "wx.h": "More about very loud sounds",
+  "wx.1t": "The sonic boom", "wx.1": "When a plane flies faster than sound (over 1,235 km/h), its sounds pile up into one huge “BOOM” that people on the ground hear like thunder.",
+  "wx.2t": "Warning sirens", "wx.2": "Sirens keep sliding up and down so they can be heard all over town and can't be mistaken for anything else.",
+  "wx.3t": "Bird scarers", "wx.3": "At airports, special speakers play birds' own danger calls to keep them away from the planes' engines.",
+  "wx.4t": "Dolphins and bats", "wx.4": "They had sonar millions of years before submarines: they call out and listen for the echo to find food."
+});
+
+QUIZ.ro.push(
+  { q: "Ce folosește ecograful ca să vadă bebelușul din burtica mamei?", o: ["O cameră foto foarte mică", "Ultrasunete — sunete prea înalte ca să le auzim", "Raze de lumină"], a: 1,
+    f: "Sonda trimite ultrasunete și ascultă ecourile. Calculatorul face din ele o imagine. E sigur și nu doare." },
+  { q: "Un submarin trimite un „ping”. Ecoul de la stânca A vine după 2 secunde, iar de la stânca B după 4 secunde. Care stâncă e mai departe?", o: ["Stânca A", "Stânca B", "Sunt la fel de departe"], a: 1,
+    f: "Cu cât ecoul se întoarce mai târziu, cu atât sunetul a avut drum mai lung de făcut, deci stânca B e mai departe." }
+);
+QUIZ.en.push(
+  { q: "What does an ultrasound scanner use to see a baby inside its mum?", o: ["A tiny camera", "Ultrasound — sounds too high for us to hear", "Beams of light"], a: 1,
+    f: "The probe sends ultrasound and listens for the echoes. A computer turns them into a picture. It's safe and doesn't hurt." },
+  { q: "A submarine sends a “ping”. The echo from rock A comes back after 2 seconds, from rock B after 4 seconds. Which rock is further away?", o: ["Rock A", "Rock B", "They're equally far"], a: 1,
+    f: "The later the echo comes back, the longer the trip the sound had to make, so rock B is further away." }
+);
+VOCAB.push(["ultrasunete", "ultrasound"], ["ecograf", "ultrasound scanner"], ["stetoscop", "stethoscope"], ["sonar", "sonar"], ["decibel (dB)", "decibel (dB)"], ["unde de șoc", "shock waves"]);

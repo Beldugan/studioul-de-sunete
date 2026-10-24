@@ -1074,12 +1074,13 @@ langHooks.push(buildQuiz);
 /* =====================================================================
    TABURI + BUCLA DE DESEN
    ===================================================================== */
-const TABS = [["tab-what", "p-what"], ["tab-shop", "p-shop"], ["tab-wave", "p-wave"], ["tab-game", "p-game"], ["tab-quiz", "p-quiz"]];
+const TABS = [["tab-what", "p-what"], ["tab-shop", "p-shop"], ["tab-wave", "p-wave"], ["tab-work", "p-work"], ["tab-game", "p-game"], ["tab-quiz", "p-quiz"]];
 TABS.forEach(([tb, p]) => $(tb).addEventListener("click", () => {
   TABS.forEach(([tb2, p2]) => { $(tb2).setAttribute("aria-selected", tb2 === tb); $(p2).classList.toggle("hidden", p2 !== p); });
   // oprește ce sună în alte taburi
   if (p !== "p-what") { JAR.stop(); DIST.stop(); }
   if (p !== "p-wave") { SCOPE.stop(); MIC.stop(); }
+  if (p !== "p-work" && window.WORK_STOP) window.WORK_STOP();
   STORE.tab = tb; saveStore();
 }));
 
@@ -1099,5 +1100,5 @@ function loop(now) {
 /* pornire */
 readColors();
 setLang(LANG);
-if (STORE.tab && $(STORE.tab)) $(STORE.tab).click();
 requestAnimationFrame(loop);
+window.addEventListener("load", () => { if (STORE.tab && $(STORE.tab)) $(STORE.tab).click(); });

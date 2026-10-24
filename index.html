@@ -6,8 +6,8 @@
 <title>Studioul de sunete</title>
 <meta name="description" content="Aplicație de fizică pentru copii: sunetul ca vibrație, instrumente care sună de-adevăratelea (pahare cu apă, chitară din elastice, tobe), unde sonore, microfon și jocuri muzicale. Bilingv RO / EN.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
-<link rel="stylesheet" href="assets/css/style.css?v=1">
-<link rel="stylesheet" href="assets/css/studio.css?v=1">
+<link rel="stylesheet" href="assets/css/style.css?v=2">
+<link rel="stylesheet" href="assets/css/studio.css?v=2">
 </head>
 <body>
 
@@ -32,6 +32,7 @@
     <button role="tab" id="tab-what" aria-selected="true" data-i18n="tab.what">🔊 Ce este sunetul?</button>
     <button role="tab" id="tab-shop" aria-selected="false" data-i18n="tab.shop">🎸 Atelierul de instrumente</button>
     <button role="tab" id="tab-wave" aria-selected="false" data-i18n="tab.wave">〰️ Laboratorul undelor</button>
+    <button role="tab" id="tab-work" aria-selected="false" data-i18n="tab.work">🩺 Sunetul la lucru</button>
     <button role="tab" id="tab-game" aria-selected="false" data-i18n="tab.game">⭐ Provocări</button>
     <button role="tab" id="tab-quiz" aria-selected="false" data-i18n="tab.quiz">❓ Quiz</button>
   </nav>
@@ -208,6 +209,105 @@
     <div class="vocab" id="vocabBox"></div>
   </section>
 
+
+  <!-- ================= SUNETUL LA LUCRU ================= -->
+  <section id="p-work" class="panel hidden">
+    <div class="band med" data-i18n="k.med">🏥 Sunetul care vindecă — medicina</div>
+
+    <h2 data-i18n="e.h">1. Ecograful: să vezi înăuntru cu ajutorul sunetului</h2>
+    <p class="muted" data-i18n="e.p">Medicul pune pe piele puțin gel și o sondă. Sonda trimite sunete atât de înalte încât nu le auzim (<b>ultrasunete</b>) și ascultă ecoul care se întoarce. Calculatorul face din ecouri o imagine. <b>Trage sonda pe piele</b> și descoperă ce e înăuntru!</p>
+    <div class="optrow">
+      <span class="ol" data-i18n="e.who">Pacientul:</span>
+      <button class="opt" data-eco="baby" aria-pressed="true" data-i18n="e.baby">🤰 o mămică</button>
+      <button class="opt" data-eco="kidney" aria-pressed="false" data-i18n="e.kidney">🧑 un om cu dureri de spate</button>
+    </div>
+    <div class="stage"><canvas id="cvEco" width="960" height="380"></canvas></div>
+    <div class="controls">
+      <button class="btn" id="ecoAuto" data-i18n="e.auto">▶ Scanează singur</button>
+      <button class="btn ghost" id="ecoReset" data-i18n="e.reset">↺ Șterge imaginea</button>
+      <div class="tile small"><div class="k" data-i18n="e.doneK">Imagine descoperită</div><div class="v" id="ecoPct">0 %</div><div class="meter"><span id="ecoBar"></span></div></div>
+    </div>
+    <div class="say" id="sayEco" data-i18n="e.say0">Ține apăsat pe sondă (sau pe burtă) și mișc-o încet de la stânga la dreapta.</div>
+
+    <h2 class="sec" data-i18n="st.h">2. Stetoscopul: ascultă inima</h2>
+    <p class="muted" data-i18n="st.p">Stetoscopul strânge sunetele slabe din corp și le duce prin tuburi direct în urechile medicului. Inima face două sunete la fiecare bătaie: „bum-tac”. Sunt ușile (valvele) inimii care se închid.</p>
+    <div class="stage"><canvas id="cvSteth" width="960" height="300"></canvas></div>
+    <div class="controls">
+      <button class="btn" id="stPlay" data-i18n="st.on">🩺 Ascultă inima</button>
+      <button class="opt" data-bpm="rest" aria-pressed="true" data-i18n="st.rest">🧘 în repaus</button>
+      <button class="opt" data-bpm="run" aria-pressed="false" data-i18n="st.run">🏃 după alergat</button>
+      <div class="tile small"><div class="k" data-i18n="st.bpmK">Bătăi pe minut</div><div class="v" id="stBpm">—</div></div>
+    </div>
+    <div class="say" id="saySteth" data-i18n="st.say0">Pune mâna pe pieptul tău și numără bătăile într-un minut. Seamănă cu ce aude stetoscopul?</div>
+
+    <h2 class="sec" data-i18n="l.h">3. Spargerea pietrelor de la rinichi, fără nicio tăietură</h2>
+    <p class="muted" data-i18n="l.p">Uneori în rinichi se formează pietricele care dor. Aparatul de mai jos trimite <b>unde de șoc</b> (sunete foarte scurte și puternice) printr-o pernă cu apă. O oglindă metalică le adună pe toate exact în piatră. Pielea nu simte aproape nimic, dar piatra crapă puțin câte puțin.</p>
+    <div class="stage"><canvas id="cvLitho" width="960" height="330"></canvas></div>
+    <div class="controls">
+      <button class="btn warm" id="lShot" data-i18n="l.shot">💥 Trimite o undă de șoc</button>
+      <button class="btn ghost" id="lReset" data-i18n="l.reset">↺ Pacient nou</button>
+      <div class="tile small"><div class="k" data-i18n="l.shotsK">Unde trimise</div><div class="v" id="lShots">0</div></div>
+    </div>
+    <div class="say" id="sayLitho" data-i18n="l.say0">Apasă butonul și urmărește cum se strâng undele în piatră.</div>
+
+    <h3 data-i18n="mx.h">Alte ajutoare cu sunet</h3>
+    <div class="facts">
+      <div><b data-i18n="mx.1t">La dentist</b><span data-i18n="mx.1">Un vârf mic care vibrează de zeci de mii de ori pe secundă desprinde tartrul de pe dinți.</span></div>
+      <div><b data-i18n="mx.2t">Aparatul auditiv</b><span data-i18n="mx.2">Un microfon mititel prinde sunetele, le face mai tari și le trimite în ureche, pentru oamenii care aud mai greu.</span></div>
+      <div><b data-i18n="mx.3t">Testul de auz</b><span data-i18n="mx.3">Cu căștile pe urechi, auzi sunete înalte și joase, tot mai încete. Ridici mâna când auzi ceva.</span></div>
+      <div><b data-i18n="mx.4t">Curățarea instrumentelor</b><span data-i18n="mx.4">Într-o cuvă cu apă, ultrasunetele fac bule mici care curăță instrumentele medicilor până în cele mai mici colțuri.</span></div>
+    </div>
+
+    <div class="band war" data-i18n="k.war">🛡️ Sunetul ca armă și ca scut</div>
+
+    <h2 data-i18n="so.h">4. Sonarul: submarinul care „vede” cu urechile</h2>
+    <p class="muted" data-i18n="so.p">În adâncul mării e întuneric, iar submarinele nu au ferestre. Ele trimit un „ping” și ascultă ecoul. Cu cât ecoul se întoarce mai târziu, cu atât obiectul e mai departe. În marea asta sunt <b>trei lucruri ascunse</b>. Mută submarinul în sus și în jos și găsește-le pe toate!</p>
+    <div class="stage"><canvas id="cvSonar" width="960" height="340"></canvas></div>
+    <div class="controls">
+      <button class="btn ghost" id="soUp" data-i18n="so.up">⬆ Urcă</button>
+      <button class="btn ghost" id="soDown" data-i18n="so.down">⬇ Coboară</button>
+      <button class="btn" id="soPing" data-i18n="so.ping">📡 Ping!</button>
+      <div class="tile small"><div class="k" data-i18n="so.echoK">Ecoul s-a întors după</div><div class="v" id="soEcho">—</div></div>
+      <div class="tile small"><div class="k" data-i18n="so.distK">Deci obiectul e la</div><div class="v" id="soDist">—</div></div>
+      <div class="tile small"><div class="k" data-i18n="so.foundK">Găsite</div><div class="v" id="soFound">0 / 3</div></div>
+    </div>
+    <div class="say" id="saySonar" data-i18n="so.say0">Sunetul merge prin apă cu 1.480 de metri pe secundă. Ecoul face drumul de două ori: dus și întors.</div>
+
+    <h2 class="sec" data-i18n="lr.h">5. Tunul de sunet: cum alungă navele pirații</h2>
+    <p class="muted" data-i18n="lr.p">Unele nave mari au un aparat numit <b>LRAD</b>. Seamănă cu o farfurie mare și trimite sunetul ca pe un fascicul de lanternă: strâns, într-o singură direcție, foarte departe. Întâi transmite avertismente cu vocea. Dacă pirații nu pleacă, trimite un sunet atât de puternic încât îi doare urechile, așa că se întorc. Nu folosește gloanțe: e o armă care <b>alungă</b>, nu una care distruge.</p>
+    <div class="optrow">
+      <button class="opt" data-lr="mega" aria-pressed="true" data-i18n="lr.mega">📢 Megafon obișnuit</button>
+      <button class="opt" data-lr="lrad" aria-pressed="false" data-i18n="lr.lrad">🎯 Tunul de sunet (LRAD)</button>
+    </div>
+    <div class="stage"><canvas id="cvLrad" width="960" height="300"></canvas></div>
+    <div class="controls">
+      <button class="btn warm" id="lrGo" data-i18n="lr.go">🔊 Trimite avertismentul</button>
+      <button class="btn ghost" id="lrReset" data-i18n="lr.reset">↺ De la capăt</button>
+      <div class="tile small"><div class="k" data-i18n="lr.dbK">Cât de tare ajunge la bărcuță</div><div class="v" id="lrDb">—</div></div>
+    </div>
+    <div class="say" id="sayLrad" data-i18n="lr.say0">Alege megafonul, apoi tunul de sunet. Ce diferență vezi?</div>
+
+    <h2 class="sec" data-i18n="sh.h">6. Creveta-pistol: arma de sunet din natură</h2>
+    <p class="muted" data-i18n="sh.p">Creveta-pistol e mică, cât un deget, dar are un clește uriaș. Îl închide atât de repede încât apa țâșnește și face o bulă. Când bula se sparge, se aude un „PAC!”, unul dintre cele mai puternice sunete din mare. Peștișorii din apropiere rămân amețiți, iar creveta îi prinde.</p>
+    <div class="stage"><canvas id="cvShrimp" width="960" height="270"></canvas></div>
+    <div class="controls">
+      <button class="btn warm" id="shSnap" data-i18n="sh.snap">🦐 Pocnește din clește!</button>
+    </div>
+    <div class="say" id="sayShrimp" data-i18n="sh.say0">Apasă butonul și uită-te atent la bulă: când se sparge, apare și o mică sclipire de lumină!</div>
+
+    <h2 class="sec" data-i18n="db.h">7. Cât de tare e prea tare? Rigla decibelilor</h2>
+    <p class="muted" data-i18n="db.p">Tăria sunetului se măsoară în <b>decibeli (dB)</b>. La fiecare 10 dB în plus, sunetul e de 10 ori mai puternic. Peste 85 dB, ascultat mult timp, sunetul strică încet urechile. De aceea muncitorii de pe șantier și de pe aeroport poartă căști de protecție.</p>
+    <div class="dbrule" id="dbRule"></div>
+
+    <h3 data-i18n="wx.h">Încă ceva despre sunete puternice</h3>
+    <div class="facts">
+      <div><b data-i18n="wx.1t">Bubuitul avionului</b><span data-i18n="wx.1">Când un avion zboară mai repede decât sunetul (peste 1.235 km/h), sunetele lui se adună într-un singur „BUM” uriaș, care se aude pe pământ ca un tunet.</span></div>
+      <div><b data-i18n="wx.2t">Sirena de alarmă</b><span data-i18n="wx.2">Sirenele urcă și coboară mereu, ca să fie auzite peste tot în oraș și să nu le confunzi cu nimic altceva.</span></div>
+      <div><b data-i18n="wx.3t">Sperietoarea de păsări</b><span data-i18n="wx.3">Pe aeroporturi, difuzoare speciale imită strigătele de pericol ale păsărilor, ca să le țină departe de motoarele avioanelor.</span></div>
+      <div><b data-i18n="wx.4t">Delfinii și liliecii</b><span data-i18n="wx.4">Ei au avut sonar cu milioane de ani înaintea submarinelor: strigă și ascultă ecoul ca să-și găsească hrana.</span></div>
+    </div>
+  </section>
+
   <!-- ================= 4. PROVOCĂRI ================= -->
   <section id="p-game" class="panel hidden">
     <div class="missions" id="missions"></div>
@@ -232,7 +332,7 @@
 
   <!-- ================= 5. QUIZ ================= -->
   <section id="p-quiz" class="panel hidden">
-    <h2 data-i18n="quiz.h">Quizul inginerului de sunet — 8 întrebări</h2>
+    <h2 data-i18n="quiz.h">Quizul inginerului de sunet — 10 întrebări</h2>
     <div id="quizBox"></div>
     <div class="controls">
       <button class="btn ghost" id="btnQuizReset" data-i18n="quiz.again">Încă o dată</button>
@@ -247,9 +347,10 @@
   <p data-i18n="foot.2">Aplicație didactică pentru Eva · funcționează offline, fără internet · sunetele sunt create direct de browser.</p>
 </footer>
 
-<script src="assets/js/i18n.js?v=1"></script>
-<script src="assets/js/audio.js?v=1"></script>
-<script src="assets/js/art.js?v=1"></script>
-<script src="assets/js/app.js?v=1"></script>
+<script src="assets/js/i18n.js?v=2"></script>
+<script src="assets/js/audio.js?v=2"></script>
+<script src="assets/js/art.js?v=2"></script>
+<script src="assets/js/app.js?v=2"></script>
+<script src="assets/js/work.js?v=2"></script>
 </body>
 </html>
