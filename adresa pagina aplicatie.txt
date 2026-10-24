@@ -1,0 +1,20 @@
+Aplicația este publicată.
+
+Nume sugerat pentru repository: studioul-de-sunete
+
+Comenzile, o singură dată, din folderul aplicației:
+
+    git init
+    git add .
+    git commit -m "Prima versiune"
+    git branch -M main
+    git remote add origin https://github.com/Beldugan/studioul-de-sunete.git
+    git push -u origin main
+
+Adresa repository-ului:
+https://github.com/Beldugan/studioul-de-sunete.git
+
+Pagina live (Settings -> Pages -> Source: GitHub Actions):
+https://beldugan.github.io/studioul-de-sunete/
+
+Până atunci aplicația merge local: dublu-click pe index.html.
