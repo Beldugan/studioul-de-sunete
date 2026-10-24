@@ -712,3 +712,6 @@ Object.assign(I18N.en, {
   "nv.winLast": "🏆 You made it through the Dark Trench too! You're a real submarine captain.",
   "nv.port": "HARBOUR", "nv.current": "current"
 });
+
+Object.assign(I18N.ro, { "foot.author": "Aplicație creată de <b>Adrian Mircea Beldugan</b>" });
+Object.assign(I18N.en, { "foot.author": "App created by <b>Adrian Mircea Beldugan</b>" });

@@ -208,3 +208,5 @@ h3.navh { margin-top: 26px; font-size: 1.08rem; color: var(--accent-dark); }
   .navroutes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .navroutes button:last-child { grid-column: 1 / -1; }
 }
+
+footer.bot .author { font-size: .95rem; color: var(--ink); margin: 10px 0 4px; }

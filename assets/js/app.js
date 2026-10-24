@@ -35,7 +35,7 @@ function setLang(l) {
   $("langEn").setAttribute("aria-pressed", l === "en");
   applyI18n();
   document.title = t("app.title").replace(/^\S+\s/, "");
-  langHooks.forEach((f) => f());
+  langHooks.forEach((f) => { try { f(); } catch (e) { console.error(e); } });
 }
 $("langRo").addEventListener("click", () => setLang("ro"));
 $("langEn").addEventListener("click", () => setLang("en"));
@@ -869,6 +869,7 @@ function tuneGame(box) {
     texts();
   }
   function texts() {
+    if (r >= ROUNDS.length) return;
     roundEl.textContent = t("tune.round", { n: r + 1, m: 5 });
     modeEl.innerHTML = t(mode() === "tap" ? "tune.modeTap" : "tune.modeBlow");
     bT.innerHTML = t("tune.target"); bP.innerHTML = t(mode() === "tap" ? "tune.tap" : "tune.blow"); bC.innerHTML = t("tune.check");
@@ -891,7 +892,7 @@ function tuneGame(box) {
       prog.children[r].className = "ok";
       setTimeout(() => {
         if (gameObj !== api) return;
-        r++; if (r < 5) makeRound(); else finish("tune", checks <= 7 ? 3 : checks <= 11 ? 2 : 1, t("ov.tune.t", { n: checks }));
+        r++; if (r < 5) makeRound(); else { r = ROUNDS.length - 1; locked = true; finish("tune", checks <= 7 ? 3 : checks <= 11 ? 2 : 1, t("ov.tune.t", { n: checks })); }
       }, 1900);
     } else {
       const tooHigh = cents > 0;
@@ -901,6 +902,7 @@ function tuneGame(box) {
     }
   });
   function draw(dt) {
+    if (r >= ROUNDS.length) return;
     const c = k.c; clear(k);
     shake *= Math.exp(-dt * 3); tShake *= Math.exp(-dt * 3);
     ART.wood(c, 0, 262, k.W, 38, COL.dark);
@@ -1087,14 +1089,14 @@ TABS.forEach(([tb, p]) => $(tb).addEventListener("click", () => {
 const MODS = [RICE, TRAVEL, JAR, DIST, GLASS, BAND, DRUMB, SCOPE, MIC];
 let lastT = performance.now();
 function loop(now) {
+  requestAnimationFrame(loop);
   const dt = Math.min(0.05, (now - lastT) / 1000); lastT = now;
   MODS.forEach((m) => {
     if ($(m.panel).classList.contains("hidden")) return;
     if (m.sub && $(m.sub).classList.contains("hidden")) return;
-    m.draw(dt);
+    try { m.draw(dt); } catch (e) { console.error(e); }
   });
-  if (!$("p-game").classList.contains("hidden") && gameObj && gameObj.draw) gameObj.draw(dt);
-  requestAnimationFrame(loop);
+  if (!$("p-game").classList.contains("hidden") && gameObj && gameObj.draw) { try { gameObj.draw(dt); } catch (e) { console.error(e); } }
 }
 
 /* pornire */
