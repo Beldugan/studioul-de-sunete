@@ -176,3 +176,35 @@ header.top .pill[aria-pressed="true"] { color: #3b1580; }
   .dbrow { grid-template-columns: 56px 1fr; }
   .dbrow .dbt { grid-column: 1 / -1; margin: -4px 0 4px; }
 }
+
+/* ---------- Misiunile de navigare cu sonarul ---------- */
+h3.navh { margin-top: 26px; font-size: 1.08rem; color: var(--accent-dark); }
+.navroutes { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin: 10px 0 12px; }
+.navroutes button {
+  border: 2px solid var(--line); border-radius: 12px; background: var(--panel); color: var(--ink);
+  padding: 9px 9px 7px; text-align: left; font: inherit; cursor: pointer; min-width: 0;
+}
+.navroutes button:hover { border-color: var(--accent); }
+.navroutes button[aria-pressed="true"] { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.navroutes .rn { font-size: .75rem; color: var(--ink-soft); text-transform: uppercase; letter-spacing: .04em; display: block; }
+.navroutes .rt { font-weight: 700; display: block; font-size: .92rem; line-height: 1.25; margin: 2px 0; }
+.navroutes .rm { font-size: .82rem; color: var(--ink-soft); display: flex; justify-content: space-between; gap: 4px; flex-wrap: wrap; }
+.navstage { background: #000; outline: none; }
+.navstage:focus-within { box-shadow: 0 0 0 3px var(--accent); }
+.navpad { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin-top: 12px; }
+.navpad .arrows { display: grid; grid-template-columns: repeat(3, 58px); grid-template-rows: repeat(2, 52px); gap: 6px; }
+.navpad .tbtn {
+  border: 2px solid var(--accent); background: var(--accent-soft); color: var(--accent-dark); border-radius: 12px;
+  font-size: 1.3rem; cursor: pointer; touch-action: none; user-select: none; -webkit-user-select: none;
+}
+.navpad .tbtn.on, .navpad .tbtn:active { background: var(--accent); color: #fff; }
+.navpad .up { grid-column: 2; grid-row: 1; }
+.navpad .left { grid-column: 1; grid-row: 2; }
+.navpad .down { grid-column: 2; grid-row: 2; }
+.navpad .right { grid-column: 3; grid-row: 2; }
+.navpad .navbtns { display: flex; flex-wrap: wrap; gap: 10px; }
+.navpad #nvPing { padding: 16px 22px; font-size: 1.05rem; }
+@media (max-width: 620px) {
+  .navroutes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .navroutes button:last-child { grid-column: 1 / -1; }
+}

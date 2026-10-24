@@ -664,3 +664,51 @@ QUIZ.en.push(
     f: "The later the echo comes back, the longer the trip the sound had to make, so rock B is further away." }
 );
 VOCAB.push(["ultrasunete", "ultrasound"], ["ecograf", "ultrasound scanner"], ["stetoscop", "stethoscope"], ["sonar", "sonar"], ["decibel (dB)", "decibel (dB)"], ["unde de șoc", "shock waves"]);
+
+/* ---------- Misiunile de navigare cu sonarul ---------- */
+Object.assign(I18N.ro, {
+  "so.reset": "↺ De la capăt",
+  "nv.h": "🧭 Misiuni de navigare: ajunge în port doar cu sonarul",
+  "nv.p": "E noapte, iar apa e neagră ca cerneala. Nu vezi pereții canionului și nici stâncile. Trimite un <b>ping</b>: unde sunetul lovește ceva, apar <b>puncte verzi</b> (ecourile). Ele se sting după câteva secunde, așa că trebuie să trimiți din nou. Ajungi la lumina verde a portului înainte să se termine timpul?",
+  "nv.route": "Traseul {n}", "nv.min": "{m} min",
+  "nv.l1": "Golful liniștit", "nv.l2": "Canionul îngust", "nv.l3": "Peștera balenelor", "nv.l4": "Labirintul de stânci", "nv.l5": "Fosa întunecată",
+  "nv.timeK": "Timp rămas", "nv.livesK": "Carena", "nv.pingsK": "Ping-uri", "nv.distK": "Până la port",
+  "nv.ping": "📡 Ping (spațiu)", "nv.restart": "↺ Restart traseu", "nv.next": "Traseul următor →",
+  "nv.start": "<b>{name}</b> · ai la dispoziție <b>{m}</b>. {tip} Apasă o săgeată (sau tastele ← ↑ ↓ →) ca să pornești. Tasta <b>spațiu</b> trimite un ping.",
+  "nv.tip1": "Farul submarinului luminează destul de departe, iar ecourile țin mult. Bun pentru învățat!",
+  "nv.tip2": "Canionul e mai îngust, iar farul bate mai aproape. Trimite ping-uri des.",
+  "nv.tip3": "Prin peșteră înoată balene. Ele se mișcă, așa că punctele lor verzi rămân în urmă!",
+  "nv.tip4": "Stâncile sunt peste tot, iar ecourile se sting repede. Oprește-te, trimite ping, apoi alege drumul.",
+  "nv.tip5": "Farul e stricat: vezi numai cu sonarul. Iar curenții mării te împing în sus și în jos!",
+  "nv.go": "Pornit! Punctele verzi sunt ecourile: acolo e stâncă sau perete. Ele se sting, deci mai trimite câte un ping.",
+  "nv.hit": "Bum! Te-ai lovit. Carena mai rezistă la {n} lovituri. Mergi mai încet și trimite un ping.",
+  "nv.hit1": "Bum! Te-ai lovit. Carena mai rezistă doar la <b>o singură lovitură</b>. Mergi foarte încet și trimite un ping.",
+  "nv.wreck": "Carena e prea avariată și submarinul trebuie să urce la suprafață pentru reparații. Apasă <b>Restart traseu</b> și încearcă din nou, mai încet.",
+  "nv.timeout": "S-a terminat timpul! Apasă <b>Restart traseu</b>. Sfat: un ping la fiecare 2–3 secunde îți arată drumul.",
+  "nv.win": "🎉 Ai ajuns în port în <b>{t}</b>, cu <b>{p}</b> ping-uri! Exact așa navighează submarinele adevărate: ascultând ecourile.",
+  "nv.winLast": "🏆 Ai trecut și prin Fosa întunecată! Ești un adevărat căpitan de submarin.",
+  "nv.port": "PORT", "nv.current": "curent"
+});
+Object.assign(I18N.en, {
+  "so.reset": "↺ Start again",
+  "nv.h": "🧭 Navigation missions: reach the harbour using only sonar",
+  "nv.p": "It's night and the water is as black as ink. You can't see the canyon walls or the rocks. Send a <b>ping</b>: wherever the sound hits something, <b>green dots</b> appear (the echoes). They fade after a few seconds, so you have to ping again. Can you reach the harbour's green light before time runs out?",
+  "nv.route": "Route {n}", "nv.min": "{m} min",
+  "nv.l1": "Quiet Bay", "nv.l2": "Narrow Canyon", "nv.l3": "Whale Cave", "nv.l4": "Rock Maze", "nv.l5": "The Dark Trench",
+  "nv.timeK": "Time left", "nv.livesK": "Hull", "nv.pingsK": "Pings", "nv.distK": "To the harbour",
+  "nv.ping": "📡 Ping (space)", "nv.restart": "↺ Restart route", "nv.next": "Next route →",
+  "nv.start": "<b>{name}</b> · you have <b>{m}</b>. {tip} Press an arrow (or the ← ↑ ↓ → keys) to start. The <b>space bar</b> sends a ping.",
+  "nv.tip1": "The submarine's lamp shines quite far and echoes last a long time. Good for learning!",
+  "nv.tip2": "The canyon is narrower and the lamp doesn't reach as far. Ping often.",
+  "nv.tip3": "Whales swim through the cave. They move, so their green dots get left behind!",
+  "nv.tip4": "There are rocks everywhere and the echoes fade fast. Stop, ping, then choose your way.",
+  "nv.tip5": "The lamp is broken: you can only see with sonar. And sea currents push you up and down!",
+  "nv.go": "Off you go! The green dots are echoes: that's where a rock or a wall is. They fade, so keep pinging.",
+  "nv.hit": "Bump! You hit something. The hull can take {n} more hits. Go slower and send a ping.",
+  "nv.hit1": "Bump! You hit something. The hull can take <b>just one more hit</b>. Go very slowly and send a ping.",
+  "nv.wreck": "The hull is too damaged and the submarine must surface for repairs. Press <b>Restart route</b> and try again, more slowly.",
+  "nv.timeout": "Time's up! Press <b>Restart route</b>. Tip: a ping every 2–3 seconds shows you the way.",
+  "nv.win": "🎉 You reached the harbour in <b>{t}</b>, using <b>{p}</b> pings! That's exactly how real submarines navigate: by listening to echoes.",
+  "nv.winLast": "🏆 You made it through the Dark Trench too! You're a real submarine captain.",
+  "nv.port": "HARBOUR", "nv.current": "current"
+});

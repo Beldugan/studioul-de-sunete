@@ -563,6 +563,11 @@ const SONAR = (() => {
   });
   function stop() {}
   let last = null;
+  $("soReset").addEventListener("click", () => {
+    OBJ.forEach((o) => (o.found = false)); found = 0; ping = null; echoes = []; subY = 150; msg = ""; last = null;
+    $("soFound").textContent = "0 / 3"; $("soEcho").textContent = "—"; $("soDist").textContent = "—";
+    sayEl("saySonar", t("so.say0"));
+  });
   function text(o, dt) {
     const d = Math.round(1480 * dt / 2);
     return t("so.calc", { t: fmt(dt, 2), d: fmt(d) }) + t(o.key) + (found === 3 ? t("so.all") : "");
